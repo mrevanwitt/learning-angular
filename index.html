@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="avengersApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Avenger App</title>
+    <link rel="stylesheet" href="reset.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body ng-controller="MainCtrl">
+
+    <button ng-click="getHeroes()">Get Heros</button>
+    <button ng-click="removeHeroes()">Hide Heros</button>
+
+    <div class="hero-wrapper">
+      <div class="heroCard" ng-repeat="hero in avengers">
+        <h3 class="heroName">{{hero.name}}</h3>
+        <h4>description</h4>
+        <h4 class="description">{{ hero.description}}<h4>
+      </div>
+    </div>
+    <!-- <h1>{{bat.name}}</h1>
+    <h2>{{bat.health}}</h2> -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.js"></script>
+    <script type="text/javascript" src='./scripts/app.js'></script>
+    <script type="text/javascript" src="./scripts/MainCtrl.js"></script>
+    <script type="text/javascript" src='./scripts/dataService.js'></script>
+  </body>
+</html>
